@@ -1,0 +1,19 @@
+﻿@model JazzCashIntegeration.Models.TransactionViewModel
+
+<!-- Add a using statement for HTML helper -->
+@using (Html.BeginForm("Transaction", "Home", FormMethod.Post, new { id = "onlineform" }))
+{
+    <div id="merchant">
+        <br />
+        <br />
+        <label for="Amount">Amount:</label>
+        <input type="text" placeholder="Enter amount" name="Amount" id="Amount" required><br />
+        <label for="DestinationNumber">Destination Number:</label>
+        <input type="text" placeholder="Enter destination number" name="DestinationNumber" id="DestinationNumber" required><br />
+        <input type="text" placeholder="Delivery Address" name="pp_Addr" id="pp_Addr"><br />
+       @*  <input type="text" placeholder="Opt Field 1" name="pp_op1" id="pp_op1"><br />
+        <input type="text" placeholder="Opt Field 2" name="pp_op2" id="pp_op2"><br /> *@
+    </div>
+
+    <button class="login" id="buttonsubmitPay" type="submit">Continue</button>
+}
